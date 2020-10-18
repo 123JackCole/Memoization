@@ -11,7 +11,7 @@ const fibonacciMemoized = (n) => {
     const fib = (n) => {
         let number;
 
-        if (n in memo) {
+        if (memo.has(n)) {
             memo.set(n, number);
         } else {
             n === 0 || n === 1 ? number = n : number = fib(n - 1) + fib(n - 2);
