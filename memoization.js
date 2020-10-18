@@ -5,7 +5,7 @@ const fibonacci = (n) => {
 
 console.log(fibonacci(4));
 
-const fibonacciMemo = (n) => {
+const fibonacciMemoized = (n) => {
     const memo = new Map();
 
     const fib = (n) => {
