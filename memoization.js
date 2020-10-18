@@ -6,13 +6,13 @@ const fibonacci = (n) => {
 console.log(fibonacci(4));
 
 const fibonacciMemo = (n) => {
-    const memo = {};
+    const memo = new Map();
 
     const fib = (n) => {
         let number;
-        
+
         if (n in memo) {
-            number = memo[n];
+            memo.set(n, number);
         } else {
             n === 0 || n === 1 ? number = n : number = fib(n - 1) + fib(n - 2);
         }
