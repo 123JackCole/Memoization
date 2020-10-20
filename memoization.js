@@ -24,3 +24,5 @@ const fibonacciMemoized = (n) => {
 }
 
 console.log(fibonacciMemo(4));
+
+// memoization with multiple variables
