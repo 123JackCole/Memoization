@@ -30,11 +30,13 @@ console.log(fibonacciMemoMultiple(4));
 // const fibonacciMemoizedMultiple = (n) => {
 //     const memo = new Map();
 
-//     const fib = (n) => {
+//     const fib = (filler, n) => {
 //         let number;
 
-//         if (memo.has(n)) {
-//             memo.set(n, number);
+//         memo.set(memo[x] or new Map());
+
+//         if (memo.has(x) && memo[x].has(x)) {
+//             memo[x].set(n, number);
 //         } else {
 //             n === 0 || n === 1 ? number = n : number = fib(n - 1) + fib(n - 2);
 //         }
@@ -46,3 +48,4 @@ console.log(fibonacciMemoMultiple(4));
 // }
 
 // console.log(fibonacciMemoMultiple(4));
+
