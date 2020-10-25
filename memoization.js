@@ -23,19 +23,18 @@ const fibonacciMemoized = (n) => {
     return fib(n);
 }
 
-console.log(fibonacciMemoMultiple(4));
+console.log(fibonacciMemoized(4));
 
-// memoization with multiple variables
 const fibonacciMemoizedMultiple = (data) => {
     const memo = new Map();
 
     const fib = (dimension, data) => {
         let number;
 
-        memo.set(memo[dimension] || new Map());
+        memo.set(dimension, memo.get(dimension) || new Map());
 
-        if (memo.has(dimension) && memo[dimension].has(data)) {
-            memo[dimension].set(data, number);
+        if (memo.has(dimension) && memo.get(dimension).has(data)) {
+            number = memo[dimension].get(data);
         } else {
             data === 0 || data === 1 ? number = data : number = fib(dimension, data - 1) + fib(dimension, data - 2);
         }
@@ -43,8 +42,8 @@ const fibonacciMemoizedMultiple = (data) => {
         return number;
     }
 
-    return fib(data);
+    return fib('test', data);
 }
 
-console.log(fibonacciMemoMultiple(4));
+console.log(fibonacciMemoizedMultiple(4));
 
